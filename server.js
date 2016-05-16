@@ -1,10 +1,13 @@
 var AV = require('leanengine');
 
-AV.init({
+var params = {
   appId: process.env.LEANCLOUD_APP_ID,
   appKey: process.env.LEANCLOUD_APP_KEY,
   masterKey: process.env.LEANCLOUD_APP_MASTER_KEY
-});
+};
+
+console.log('init with params:', params);
+AV.init(params);
 
 var app = require('./app');
 
